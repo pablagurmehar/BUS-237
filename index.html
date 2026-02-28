@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABC Logistics - Inventory Command Center</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="menu-bar">
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="about.html">Developer Profile</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Inventory Command Center</h1>
+      <p class="subtitle">Track warehouse items and quantities in real time.</p>
+
+      <form id="item-form" novalidate>
+        <div class="form-grid">
+          <label>
+            Item Name
+            <input id="item-name" type="text" placeholder="e.g., Pallet Wrap" required maxlength="50" />
+          </label>
+          <label>
+            Quantity
+            <input id="item-qty" type="number" min="0" step="1" inputmode="numeric" placeholder="e.g., 24" required />
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit">Add Item</button>
+          <button type="button" id="clear-all" class="danger">Clear All Items</button>
+        </div>
+        <p id="message" class="message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="chart-header">
+        <h2>Inventory Visualization</h2>
+        <button id="toggle-chart" type="button">Switch to Pie Chart</button>
+      </div>
+      <canvas id="inventory-chart" aria-label="Inventory chart" role="img"></canvas>
+    </section>
+
+    <section class="card">
+      <h2>Current Items</h2>
+      <ul id="inventory-list" class="inventory-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

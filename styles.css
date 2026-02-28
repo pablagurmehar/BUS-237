@@ -1,0 +1,135 @@
+:root {
+  --bg: #eef3fb;
+  --card: #ffffff;
+  --primary: #1f4e79;
+  --accent: #2a9d8f;
+  --text: #213547;
+  --danger: #c0392b;
+  --muted: #6b7a8c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.menu-bar {
+  background: var(--primary);
+  padding: 0.75rem 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-bar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+}
+
+.menu-bar a:hover,
+.menu-bar a.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.container {
+  max-width: 960px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 18px rgba(31, 78, 121, 0.08);
+}
+
+.subtitle {
+  margin-top: -0.25rem;
+  color: var(--muted);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+input {
+  padding: 0.6rem;
+  border: 1px solid #ccd8e6;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 0.95rem;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+.message {
+  min-height: 1.25rem;
+  margin-top: 0.6rem;
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inventory-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.inventory-list li {
+  display: flex;
+  justify-content: space-between;
+  background: #f5f8fc;
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+}
+
+.note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
